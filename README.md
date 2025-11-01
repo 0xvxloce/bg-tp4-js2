@@ -1,4 +1,4 @@
-# ⚙️ TP4 (par 2) – JavaScript : Manipulation du DOM et mini-application CRUD
+# ⚙️ TP4 (part 2) – JavaScript : Manipulation du DOM et mini-application CRUD
 
 ## 🎯 Objectif du TP
 L’objectif de ce TP est de vous familiariser avec les **méthodes et propriétés JavaScript** utilisées pour la **manipulation du DOM**.  
@@ -69,4 +69,5 @@ Vous allez mettre en pratique ces notions à travers la réalisation d’une **m
 
 ## 📎 Lien d’assignement
 Le lien GitHub Classroom est disponible sur **Google Classroom**.
+
 
