@@ -33,6 +33,7 @@ Vous allez mettre en pratique ces notions à travers la réalisation d’une **m
    - Chaque étape correspond à un **dossier distinct** : `etape1`, `etape2`, …, `etape6`.
    - Dans chaque dossier, complétez les fichiers **`index.html`** et **`script.js`** selon les consignes du PDF.
    - Certaines étapes peuvent aussi inclure un fichier **`style.css`** à compléter quand demandé.
+   - La **dernière étape** du TP consiste à rajouter 3 fonctionnalités supplémentaires de votre choix.
 
 4. **Soumission**
    - Une fois le travail terminé, exécutez :
