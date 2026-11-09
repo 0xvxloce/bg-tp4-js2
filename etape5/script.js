@@ -65,4 +65,21 @@ function consoleTableau() {
         console.log(person);
     }
 }
+function doNewData() {
+    const elt_nom = document.querySelector("#form_nom");
+    const elt_prenom = document.querySelector("#form_prenom");
+    const elt_points = document.querySelector("#form_points");
+
+    const nom = elt_nom.value;
+    const prenom = elt_prenom.value;
+    const points = parseInt(elt_points.value);
+    if (nom == "" || prenom == "" || Number.isNaN(points)) { window.alert("Formulaire incomplet") } else {
+        doInsert(nom, prenom, points);
+        persons.push(lignes, nom, prenom, points);
+    }
+    elt_nom.value = "";
+    elt_prenom.value = "";
+    elt_points.value = "";
+}
+
 

@@ -36,3 +36,12 @@ body {
 
 
 }
+
+#form_container {
+    display: flex;
+}
+
+.form_group {
+    margin-left: 10px;
+    font-weight: bold;
+}
