@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 4 P2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div id="table_container">
+            <table id="myTable" border>
+                <tr>
+                    <th class="col_number tabhead">N</th>
+                    <th class="col_text tabhead">Nom</th>
+                    <th class="col_text tabhead">Prenom</th>
+                    <th class="col_number tabhead">Points</th>
+                    <th class="col_chkbox tabhead">Select</th>
+                </tr>
+                <tr>
+                    <td class="col_number">1</td>
+                    <td class="col_text">Nom 1</td>
+                    <td class="col_text">Prenom 1</td>
+                    <td class="col_number">5</td>
+                    <td class="col_chkbox"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td class="col_number">2</td>
+                    <td class="col_text">Nom 2</td>
+                    <td class="col_text">Prenom 2</td>
+                    <td class="col_number">5</td>
+                    <td class="col_chkbox"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td class="col_number">3</td>
+                    <td class="col_text">Nom 3</td>
+                    <td class="col_text">Prenom 3</td>
+                    <td class="col_number">5</td>
+                    <td class="col_chkbox"><input type="checkbox"></td>
+                </tr>
+
+
+
+            </table>
+            <button onclick="doInsertRowTable(99, 'nom', 'prenom', 10)">Ajouter</button>
+        </div>
+    </main>
+</body>
+
+</html>

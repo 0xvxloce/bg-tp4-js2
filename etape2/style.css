@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#table_container {
+    margin: 30px auto;
+    
+}
+
+body {
+    font-family: Calibri, sans-serif;
+}
+
+.tabhead {
+    background-color: #2e6bef;
+    color: white;
+}
