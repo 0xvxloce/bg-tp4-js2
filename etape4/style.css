@@ -5,7 +5,7 @@ table {
 
 #table_container {
     margin: 30px auto;
-    
+
 }
 
 body {
@@ -15,4 +15,24 @@ body {
 .tabhead {
     background-color: #2e6bef;
     color: white;
+}
+
+#container_summary {
+    color: #787878;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: #EFEFEF;
+    border: 1px solid black;
+    border-top: none;
+}
+
+#container_summary p {
+    margin: 0 0 3px 0;
+    padding-bottom: 3px;
+    padding-top: 3px;
+
+
 }

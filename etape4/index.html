@@ -27,7 +27,12 @@
                 </tbody>
 
             </table>
-            <button id="addrow" onclick="doInsertRowTable(99, 'nom', 'prenom', 10)">Ajouter</button>
+            <div id="container_summary">
+                <p id="p1">0 ligne(s)</p>
+                <p id="p2"></p>
+                <p id="p3">Total des points = 0 </p>
+            </div>
+            <button id="addrow" onclick="doInsert(nom, prenom, 10)">Ajouter</button>
             <button id="tabconsole" onclick="consoleTableau()">Tableau Console</button>
         </div>
     </main>

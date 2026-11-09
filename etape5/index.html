@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 4 P2</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+        <div id="table_container">
+            <table id="myTable" border>
+                <thead>
+                    <tr>
+                        <th class="col_number tabhead">N</th>
+                        <th class="col_text tabhead">Nom</th>
+                        <th class="col_text tabhead">Prenom</th>
+                        <th class="col_number tabhead">Points</th>
+                        <th class="col_chkbox tabhead">Select</th>
+                    </tr>
+                </thead>
+                <tbody class="vartable">
+
+                </tbody>
+
+            </table>
+            <div id="container_summary">
+                <p id="p1">0 ligne(s)</p>
+                <p id="p2"></p>
+                <p id="p3">Total des points = 0 </p>
+            </div>
+            <button id="addrow" onclick="doInsert(nom, prenom, 10)">Ajouter</button>
+            <button id="tabconsole" onclick="consoleTableau()">Tableau Console</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

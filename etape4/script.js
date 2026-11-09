@@ -1,5 +1,6 @@
 "use strict";
 var lignes = 0;
+var total_points = 0;
 function doInsertRowTable(num, nom, prenom, points) {
     const table = document.querySelector("#myTable");
     const row = document.createElement("tr");
@@ -34,9 +35,20 @@ const persons = [
     { num: 2, nom: "nom-2", prenom: "prenom-2", points: 10 },
     { num: 3, nom: "nom-3", prenom: "prenom-3", points: 15 }
 ];
+function updateSummary() {
+    const element_lignes = document.querySelector("#p1");
+    const element_points = document.querySelector("#p3");
+
+    element_lignes.innerText = lignes + " ligne(s)";
+    element_points.innerText = "Total des points = " + total_points;
+}
+
 function doInsert(nom, prenom, points) {
     doInsertRowTable(lignes + 1, nom, prenom, points);
     lignes++;
+    total_points += points;
+    updateSummary();
+
 }
 
 init();
