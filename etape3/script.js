@@ -1,4 +1,5 @@
 "use strict";
+var lignes = 0;
 function doInsertRowTable(num, nom, prenom, points) {
     const table = document.querySelector("#myTable");
     const row = document.createElement("tr");
@@ -26,5 +27,30 @@ function doInsertRowTable(num, nom, prenom, points) {
     row.append(col1, col2, col3, col4, col5);
     table.querySelector("tbody").appendChild(row);
 
+}
+
+const persons = [
+    { num: 1, nom: "nom-1", prenom: "prenom-1", points: 5 },
+    { num: 2, nom: "nom-2", prenom: "prenom-2", points: 10 },
+    { num: 3, nom: "nom-3", prenom: "prenom-3", points: 15 }
+];
+function doInsert(nom, prenom, points) {
+    doInsertRowTable(lignes + 1, nom, prenom, points);
+    lignes++;
+}
+
+init();
+
+function init() {
+    // boucle for of vu dans le slide 44
+    for (const person of persons) {
+        doInsert(person.nom, person.prenom, person.points);
+    }
+
+}
+function consoleTableau() {
+    for (const person of persons) {
+        console.log(person);
+    }
 }
 
