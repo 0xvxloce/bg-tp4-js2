@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 4 P2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="table_container">
+            <table id="myTable" border>
+                <thead>
+                    <tr>
+                        <th class="col_number tabhead">N</th>
+                        <th class="col_text tabhead">Nom</th>
+                        <th class="col_text tabhead">Prenom</th>
+                        <th class="col_number tabhead">Points</th>
+                        <th class="col_chkbox tabhead">Select</th>
+                    </tr>
+                </thead>
+                <tbody class="vartable">
+
+                </tbody>
+
+            </table>
+            <button id="addrow" onclick="doInsertRowTable(99, 'nom', 'prenom', 10)">Ajouter</button>
+            <!-- lorsque on actualise on remarque qu'on repasse au tableau initial-->
+        </div>
+    </main>
+</body>
+
+</html>
