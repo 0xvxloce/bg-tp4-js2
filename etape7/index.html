@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 4 P2</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+        <!-- Zone de recherche et de tri -->
+<div id="search_sort_container" style="margin-bottom: 15px; display: flex; gap: 10px;">
+    <input type="text" id="searchInput" placeholder="Rechercher par nom ou prénom..." onkeyup="rechercherPersonne()" class="form_field" style="width: 250px;" />
+    <button class="btn-sort" onclick="trierParPoints()">Trier par Points</button>
+    
+</div>
+        <div id="table_container">
+            <div>
+                <div id="form_container">
+                    <div class="form_group">
+                        <label class="form_label">Nom:</label>
+                        <input type="text" id="form_nom" class="form_field">
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label">Prénom:</label>
+                        <input type="text" id="form_prenom" class="form_field">
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label">Points:</label>
+                        <input type="number" id="form_points" class="form_field">
+                    </div>
+
+                    <button class="btn-add" onclick="doNewData()">
+                        Ajouter
+                    </button>
+                </div>
+            </div>
+            <table id="myTable" border>
+                <thead>
+                    <tr>
+                        <th class="col_number tabhead">N</th>
+                        <th class="col_text tabhead">Nom</th>
+                        <th class="col_text tabhead">Prenom</th>
+                        <th class="col_number tabhead">Points</th>
+                        <th class="col_chkbox tabhead">Select</th>
+                    </tr>
+                </thead>
+                <tbody class="vartable">
+
+                </tbody>
+
+            </table>
+            <div id="container_summary">
+                <p id="p1">0 ligne(s)</p>
+                <p id="p2"></p>
+                <p id="p3">Total des points = 0 </p>
+            </div>
+            <div class="btns-en-bas">
+                <button class="btn-consol" id="tabconsole" onclick="consoleTableau()">Tableau Console</button>
+                <button class="btn-del" onclick="deleteRow()">Supprimer </button>
+                <button class="btn-edit" onclick="preparerModification()">Modifier</button>
+                <!--apres actualisation le tableau revient quand meme a l'etat initial
+                quand on ouvre inspect/network :  -->
+            </div>
+        </div>
+        
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

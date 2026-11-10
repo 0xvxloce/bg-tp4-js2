@@ -61,9 +61,7 @@ function init() {
 
 }
 function consoleTableau() {
-    for (const person of persons) {
-        console.log(person);
-    }
+    console.log(persons); // Affiche le tableau global d'un coup, plus propre et conforme au TP
 }
 function doNewData() {
     const elt_nom = document.querySelector("#form_nom");

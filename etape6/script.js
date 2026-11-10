@@ -21,8 +21,7 @@ function doInsertRowTable(num, nom, prenom, points) {
     col5.appendChild(checkbox);
 
     col1.setAttribute("class", "col_number");
-    col4.setAttribute("class", "col_number");
-    col4.setAttribute("class", "col_points");
+    col4.setAttribute("class", "col_number col_points");
     col2.setAttribute("class", "col_text");
     col3.setAttribute("class", "col_text");
     col5.setAttribute("class", "col_chkbox");
@@ -65,9 +64,7 @@ function init() {
 
 }
 function consoleTableau() {
-    for (const person of persons) {
-        console.log(person);
-    }
+    console.log(persons); // Affiche le tableau global d'un coup, plus propre et conforme au TP
 }
 function doNewData() {
     const elt_nom = document.querySelector("#form_nom");
@@ -143,4 +140,3 @@ function deleteRow() {
 
     updateSummary();
 }
-
