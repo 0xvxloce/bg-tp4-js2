@@ -22,6 +22,7 @@ function doInsertRowTable(num, nom, prenom, points) {
 
     col1.setAttribute("class", "col_number");
     col4.setAttribute("class", "col_number");
+    col4.setAttribute("class", "col_points");
     col2.setAttribute("class", "col_text");
     col3.setAttribute("class", "col_text");
     col5.setAttribute("class", "col_chkbox");
@@ -45,11 +46,14 @@ function updateSummary() {
 
 function doInsert(nom, prenom, points) {
     doInsertRowTable(lignes + 1, nom, prenom, points);
+
     lignes++;
     total_points += points;
-    updateSummary();
 
+    updateSummary();
 }
+
+
 
 init();
 
@@ -73,49 +77,70 @@ function doNewData() {
     const nom = elt_nom.value;
     const prenom = elt_prenom.value;
     const points = parseInt(elt_points.value);
-    if (nom == "" || prenom == "" || Number.isNaN(points)) { window.alert("Formulaire incomplet") } else {
-        doInsert(nom, prenom, points);
-        persons.push(lignes, nom, prenom, points);
+
+    if (nom == "" || prenom == "" || Number.isNaN(points)) {
+        alert("Formulaire incomplet");
+        return;
     }
+
+    lignes++;
+
+    persons.push({
+        num: lignes,
+        nom: nom,
+        prenom: prenom,
+        points: points
+    });
+
+    doInsertRowTable(lignes, nom, prenom, points);
+
+    total_points += points;
+    updateSummary();
+
     elt_nom.value = "";
     elt_prenom.value = "";
     elt_points.value = "";
 }
 function deleteRow() {
     if (lignes == 0) {
-        window.alert("Tableau Vide");
+        alert("le tableau est vide");
         return;
     }
+
     const table = document.querySelector("#myTable");
-    const colchkbox = table.querySelectorAll(".col_chkbox:input=checked");
 
-    if (colchkbox.length == 0) {
-        window.alert("select at least one row");
+    const chkboxcol = table.querySelectorAll(
+        ".col_chkbox input[type='checkbox']:checked"
+    );
+
+    if (chkboxcol.length == 0) {
+        alert("selectionnez au moins une ligne");
         return;
     }
-    if (!confirm("Voulez-vous vraiment supprimer les lignes selectiones ?")) { return; }
-    const tbody = table.querySelector("tbody");
-    const rows = tbody.querySelectorAll("tr");
-    for (let i = rows.length - 1; i >= 0; i--) {
 
-        const checkbox = rows[i].querySelector(
-            ".col_chkbox input"
-        );
+    if (!confirm("voulez vous vraiment supprimer cette/ces ligne(s) ?")) {
+        return;
+    }
+
+    const rows = table.querySelectorAll("tbody tr");
+
+    for (let i = rows.length - 1; i >= 0; i--) {
+        const row = rows[i];
+        const checkbox = row.querySelector(".col_chkbox input");
 
         if (checkbox.checked) {
-
-            const points = parseInt(rows[i].cells[3].innerText);
+            const points = parseInt(
+                row.querySelector(".col_points").textContent
+            );
 
             total_points -= points;
             lignes--;
 
-            rows[i].remove();
-
             persons.splice(i, 1);
+            row.remove();
         }
     }
-    alert("Suppression effectuée avec succès !");
+
     updateSummary();
 }
-
 
